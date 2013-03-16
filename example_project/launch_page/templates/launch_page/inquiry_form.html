@@ -1,0 +1,38 @@
+{% extends "launch_page/base.html" %}
+
+{% block scripts %}
+	{{ block.super }}
+	<script type="text/javascript" src="{{ STATIC_URL }}javascripts/inquire.js"></script>
+{% endblock scripts %}
+
+{% block content %}
+	<div id="message_area"></div>
+
+	<p>Inquire Within.</p>
+	<form id="inquiry_form" method="POST" action="{% url "launch_page_inquire" %}">
+		{% csrf_token %}
+		<fieldset>{{ form }}</fieldset>
+		<input type="Submit" value="Inquire"<input>
+	</form>
+{% endblock content %}
+
+{% block body_scripts %}
+	{{ block.super }}
+	<script id="message_template" type="text/x-handlebars-template">
+		{% verbatim %}
+		<div class="alert alert-{{tags}} fade in" data-alert="{{tags}}">
+			<a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
+			{{{message}}}
+		</div>
+		{% endverbatim %}
+	</script>
+
+	<script id="message_block_template" type="text/x-handlebars-template">
+		{% verbatim %}
+		<div class="alert alert-block alert-{{level}} fade in">
+			<a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
+			{{{body}}}
+		</div>
+		{% endverbatim %}
+	</script>
+{% endblock body_scripts %}
