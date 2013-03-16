@@ -1,3 +1,4 @@
+Django==1.5
 distribute==0.6.35
 stevedore==0.8
 virtualenv==1.8.4
