@@ -1,3 +1,4 @@
 *.log
 *.pot
 *.pyc
+example_project.db
