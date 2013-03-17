@@ -40,4 +40,9 @@ To install into a local development environment
 	make release
 	cd dist/django-launch-page-FOO && python setup.py install
 
+Testing across multiple Python versions is support with tox. To run the tests with tox:
+
+	make test_tox
+
 [GeoIP]: https://docs.djangoproject.com/en/dev/ref/contrib/gis/geoip/
+[tox]: http://tox.readthedocs.org/en/latest/
