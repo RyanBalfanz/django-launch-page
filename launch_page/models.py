@@ -3,6 +3,7 @@ from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 
+
 INQUIRY_FIRST_NAME_MAX_LENGTH = 255
 INQUIRY_LAST_NAME_MAX_LENGTH = 255
 
@@ -20,6 +21,3 @@ class Inquiry(models.Model):
 
 	def __unicode__(self):
 		return self.email_address
-
-	# def get_absolute_url(self):
-	# 	return reverse('launch_page_inquiry_detail', kwargs={'pk': self.pk})
