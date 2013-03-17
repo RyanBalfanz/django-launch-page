@@ -1,3 +1,6 @@
+build:
+	python setup.py sdist
+
 clean:
 	rm -rf ./dist
 	rm -rf *.egg-info
@@ -12,8 +15,6 @@ install_deps_py:
 register:
 	python setup.py register
 
-release: test_tox
-	python setup.py sdist
 
 test: test_tox
 
