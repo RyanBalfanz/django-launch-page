@@ -68,11 +68,6 @@ Run the example project with either Foreman or the devserver
 	foreman start
 	python example_project/manage.py runserver
 
-To install into a local development environment
-
-	make release
-	cd dist/django-launch-page-FOO && python setup.py install
-
 Testing across multiple Python versions is support with tox. To run the tests with tox:
 
 	make test_tox
