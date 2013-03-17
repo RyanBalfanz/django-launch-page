@@ -4,6 +4,11 @@ clean:
 	rm -rf ./.tox
 	find . -name *.pyc -delete
 
+install_deps: install_deps_py
+
+install_deps_py:
+	pip install -r requirements.txt
+
 register:
 	python setup.py register
 
