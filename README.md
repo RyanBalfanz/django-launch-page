@@ -28,12 +28,45 @@ Include the `launch_page` URLconf in your project urls.py like this:
 		url(r'^launch_page/', include('launch_page.urls')),
 	)
 
+or, bind it to the root domain:
+
+	from launch_page.urls import launch_page_urlpatterns
+	urlpatterns += launch_page_urlpatterns
+
+
 Migrate the application:
 
 	python manage.py migrate launch_page
 
 Contributing
 ------------
+
+Create a new virtualenv:
+
+	mkvirtualenv <env_name>
+
+First, set some environment variables:
+
+	export DJANGO_SETTINGS_MODULE=example_project.settings.local
+	export DJANGO_DEBUG=true # Or unset DJANGO_DEBUG to disable
+	export DJANGO_SECRET_KEY='your_secret_key'
+
+Add the repository root to your `PYTHONPATH`
+
+	export PYTHONPATH=`pwd`:$PYTHONPATH
+
+or, create a new build and install it to your virtualenv
+
+	make release
+	cd dist/
+	tar -xzvf django-launch-page-<version>
+	cd django-launch-page-<version>/
+	python setup.py install
+
+Run the example project with either Foreman or the devserver
+
+	foreman start
+	python example_project/manage.py runserver
 
 To install into a local development environment
 
