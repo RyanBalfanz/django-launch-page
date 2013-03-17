@@ -38,6 +38,8 @@ Migrate the application:
 
 	python manage.py migrate launch_page
 
+The use of custom templates is similar to overrideing admin templates.
+
 Contributing
 ------------
 
@@ -74,3 +76,4 @@ Testing across multiple Python versions is support with tox. To run the tests wi
 
 [GeoIP]: https://docs.djangoproject.com/en/dev/ref/contrib/gis/geoip/
 [tox]: http://tox.readthedocs.org/en/latest/
+[Overriding admin templates]: https://docs.djangoproject.com/en/dev/ref/contrib/admin/#overriding-admin-templates
