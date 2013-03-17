@@ -6,16 +6,18 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', 'example_project.views.home', name='home'),
-    url(r'^launch_page/', include('launch_page.urls')),
+	# Examples:
+	url(r'^$', 'example_project.views.home', name='home'),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+	# Uncomment the admin/doc line below to enable admin documentation:
+	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+	# Uncomment the next line to enable the admin:
+	url(r'^admin/', include(admin.site.urls)),
 )
+
+from launch_page.urls import launch_page_urlpatterns
+urlpatterns += launch_page_urlpatterns
 
 
 if settings.DEBUG:
