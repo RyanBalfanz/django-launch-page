@@ -1,6 +1,8 @@
 django-launch-page
 ==================
 
+[![Build Status](https://travis-ci.org/RyanBalfanz/django-launch-page.png?branch=develop)](https://travis-ci.org/RyanBalfanz/django-launch-page)
+
 A launch page for a Django project to collect e-mail addresses and more.
 
 Installing `launch_page` to you Django project will give you a simple teaser page for collecting e-mail addresses, names, and IP addresses.
