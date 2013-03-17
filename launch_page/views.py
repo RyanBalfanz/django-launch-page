@@ -31,6 +31,9 @@ class AjaxableResponseMixin(object):
 			return super(AjaxableResponseMixin, self).form_invalid(form)
 
 	def form_valid(self, form):
+		def create_inquiry(specification):
+			return Inquiry.objects.create(**specification)
+
 		if self.request.is_ajax():
 			data = {
 				'first_name': form.instance.first_name,
@@ -38,12 +41,13 @@ class AjaxableResponseMixin(object):
 				'email_address': form.instance.email_address,
 			}
 
-			Inquiry.objects.create(
-				first_name=form.instance.first_name,
-				last_name=form.instance.last_name,
-				email_address=form.instance.email_address,
-				ip_address=self.request.META['REMOTE_ADDR'],
-			)
+			newInquiry = {
+				"first_name": form.instance.first_name,
+				"last_name": form.instance.last_name,
+				"email_address": form.instance.email_address,
+				"ip_address": self.request.META['REMOTE_ADDR'],
+			}
+			create_inquiry(newInquiry)
 
 			return self.render_to_json_response(data)
 		else:
