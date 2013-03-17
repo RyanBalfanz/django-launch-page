@@ -5,6 +5,6 @@ python:
   - "pypy"
 install:
   - make install_deps
+  - make build
 script:
-  - python example_project/manage.py test --settings=example_project.settings.test
   - make test
