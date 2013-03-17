@@ -2,6 +2,7 @@ import glob
 import os
 
 from fabric.api import cd, env, lcd, local, run
+from fabric.context_managers import shell_env
 
 
 def local_build_and_install():
@@ -15,4 +16,5 @@ def local_build_and_install():
 		# 	local("python setup.py install")
 
 def local_test():
-	local("python example_project/manage.py test")
+	with shell_env(DJANGO_SETTINGS_MODULE="example_project.settings.test"):
+		local("python example_project/manage.py test")
