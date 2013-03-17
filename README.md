@@ -38,7 +38,7 @@ Migrate the application:
 
 	python manage.py migrate launch_page
 
-The use of custom templates is similar to overrideing admin templates.
+The use of custom templates is similar to overriding admin templates.
 
 Contributing
 ------------
