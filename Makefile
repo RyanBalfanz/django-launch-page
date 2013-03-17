@@ -11,7 +11,7 @@ release: test
 	python setup.py sdist
 
 test:
-	python example_project/manage.py test
+	tox
 
 upload:
 	python setup.py upload

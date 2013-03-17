@@ -2,5 +2,6 @@
 *.log
 *.pot
 *.pyc
+*.tox
 dist/
 example_project.db
