@@ -15,8 +15,10 @@ install_deps_py:
 register:
 	python setup.py register
 
+test: test_django test_tox
 
-test: test_tox
+test_django:
+	python example_project/manage.py test --settings=example_project.settings.test
 
 test_tox:
 	tox --recreate
