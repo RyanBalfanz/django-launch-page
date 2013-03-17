@@ -7,11 +7,11 @@ clean:
 register:
 	python setup.py register
 
-release: test
+release: test_tox
 	python setup.py sdist
 
-test:
-	tox
+test_tox:
+	tox --recreate
 
 upload:
 	python setup.py upload
