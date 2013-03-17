@@ -10,6 +10,8 @@ register:
 release: test_tox
 	python setup.py sdist
 
+test: test_tox
+
 test_tox:
 	tox --recreate
 

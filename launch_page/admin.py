@@ -12,6 +12,9 @@ class InquiryAdmin(admin.ModelAdmin):
 		"ip_address",
 		"creation_time",
 	)
+	list_filter = (
+		"creation_time",
+	)
 
 
 admin.site.register(Inquiry, InquiryAdmin)
