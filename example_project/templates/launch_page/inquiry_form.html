@@ -1,0 +1,13 @@
+{% extends "launch_page/base.html" %}
+
+{% block content %}
+	<h1>My custom inquiry form.</h1>
+	<div id="message_area"></div>
+
+	<p>Inquire Within.</p>
+	<form id="inquiry_form" method="POST" action="{% url 'inquiry_create' %}">
+		{% csrf_token %}
+		<fieldset>{{ form }}</fieldset>
+		<input type="Submit" value="Inquire"<input>
+	</form>
+{% endblock content %}
