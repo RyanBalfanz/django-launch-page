@@ -10,7 +10,7 @@ clean:
 install_deps: install_deps_py
 
 install_deps_py:
-	pip install -r requirements.txt
+	PIP_DOWNLOAD_CACHE=/tmp pip install -r requirements.txt
 
 register:
 	python setup.py register
