@@ -1,0 +1,2 @@
+include README.md
+recursive-include launch_page *.py *.html *.js
