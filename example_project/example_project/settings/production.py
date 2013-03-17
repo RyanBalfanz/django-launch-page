@@ -3,6 +3,9 @@ import dj_database_url
 from .base import *
 
 
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
+TEMPLATE_DEBUG = DEBUG
+
 DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
