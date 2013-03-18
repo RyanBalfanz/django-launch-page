@@ -16,5 +16,8 @@ def local_build_and_install():
 		# 	local("python setup.py install")
 
 def local_test():
-	with shell_env(DJANGO_SETTINGS_MODULE="example_project.settings.test"):
+	lcwd = local("pwd")
+	oldPP = os.getenv("PYTHONPATH")
+	newPP = ":".join([lcwd, oldPP])
+	with shell_env(DJANGO_SETTINGS_MODULE="example_project.settings.test", PYTHONPATH=newPP):
 		local("python example_project/manage.py test")
