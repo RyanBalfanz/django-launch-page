@@ -4,7 +4,7 @@ django-launch-page
 A launch page for a Django project to collect e-mail addresses and more.
 """
 
-VERSION = (0, 1, 0)
+VERSION = (0, 1, 1)
 
 __version__ = ".".join(map(str, VERSION[0:3])) + "".join(VERSION[3:])
 __author__ = "Ryan Balfanz"
