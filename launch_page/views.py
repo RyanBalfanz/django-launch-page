@@ -1,7 +1,7 @@
 import json
 
 from django.core.urlresolvers import reverse_lazy
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import FormView
@@ -11,7 +11,9 @@ from .models import Inquiry
 
 
 def home(request):
-	return HttpResponse("It worked.")
+	from django.core.urlresolvers import reverse
+
+	return HttpResponseRedirect(reverse('inquiry_create'))
 
 
 class AjaxableResponseMixin(object):
@@ -58,7 +60,7 @@ class InquiryCreate(AjaxableResponseMixin, CreateView):
 	model = Inquiry
 	form_class = InquiryForm
 	# template_name = "launch_page/inquiry_form.html"
-	success_url = reverse_lazy('launch_page_inquire_thanks')
+	success_url = reverse_lazy('inquiry_create_success')
 
 
 class InquiryCreateSuccess(TemplateView):

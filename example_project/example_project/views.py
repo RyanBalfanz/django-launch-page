@@ -1,7 +1,8 @@
 import json
 
-from django.http import HttpResponse
+from django.core.urlresolvers import reverse
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 def home(request):
-	return HttpResponse("Cool stuff ahead")
+	return HttpResponseRedirect(reverse('inquiry_create'))

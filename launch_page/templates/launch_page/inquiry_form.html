@@ -9,7 +9,7 @@
 	<div id="message_area"></div>
 
 	<p>Inquire Within.</p>
-	<form id="inquiry_form" method="POST" action="{% url "launch_page_inquire" %}">
+	<form id="inquiry_form" method="POST" action="{% url 'inquiry_create' %}">
 		{% csrf_token %}
 		<fieldset>{{ form }}</fieldset>
 		<input type="Submit" value="Inquire"<input>

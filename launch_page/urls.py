@@ -5,8 +5,8 @@ from .views import create_inquiry
 from .views import create_inquiry_success
 
 
-urlpatterns = patterns('',
-	url(r'^$', home, name='home'),
-	url(r'^inquire/$', create_inquiry, name='launch_page_inquire'),
-	url(r'^inquire/thanks$', create_inquiry_success, name='launch_page_inquire_thanks'),
+launch_page_urlpatterns = patterns('',
+	# url(r'^$', home, name='home'),
+	url(r'^inquire$', create_inquiry, name='inquiry_create'),
+	url(r'^inquire/thanks$', create_inquiry_success, name='inquiry_create_success'),
 )

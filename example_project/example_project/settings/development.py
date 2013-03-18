@@ -3,10 +3,12 @@ import dj_database_url
 from .base import *
 
 
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 TEMPLATE_DEBUG = DEBUG
 
 DATABASES['default'] =  dj_database_url.config()
+
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 
 MIDDLEWARE_CLASSES += (
 	'debug_toolbar.middleware.DebugToolbarMiddleware',
