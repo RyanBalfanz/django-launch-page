@@ -1,8 +1,14 @@
 language: python
+
 python:
   - "2.6"
   - "2.7"
+
+env:
+  - DJANGO_SETTINGS_MODULE=example_project.settings.test
+
 install:
-  - make install_deps
+  - pip install -r requirements.txt
+
 script:
-  - fab local_test
+  - make test_basic
