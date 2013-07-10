@@ -1,12 +1,12 @@
 from django.conf.urls import patterns, include, url
 
-from .views import home
-from .views import create_inquiry
-from .views import create_inquiry_success
+from .views import HomeView
+from .views import InquiryCreate
+from .views import InquiryCreateSuccess
 
 
-launch_page_urlpatterns = patterns('',
-	# url(r'^$', home, name='home'),
-	url(r'^inquire$', create_inquiry, name='inquiry_create'),
-	url(r'^inquire/thanks$', create_inquiry_success, name='inquiry_create_success'),
+urlpatterns = patterns('',
+	url(r'^$', HomeView.as_view(), name='inquiry_home'),
+	url(r'^inquire/$', InquiryCreate.as_view(), name='inquiry_create'),
+	url(r'^inquire/thanks/$', InquiryCreateSuccess.as_view(), name='inquiry_create_success'),
 )
