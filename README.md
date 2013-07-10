@@ -44,7 +44,6 @@ or, bind it to the root domain:
 	from launch_page.urls import launch_page_urlpatterns
 	urlpatterns += launch_page_urlpatterns
 
-
 Migrate the application:
 
 	python manage.py migrate launch_page
@@ -58,25 +57,17 @@ Create a new virtualenv:
 
 	mkvirtualenv <env_name>
 
-First, set some environment variables:
+First, set some environment variables (a .env file helps here):
 
 	export DJANGO_SETTINGS_MODULE=example_project.settings.local
 	export DJANGO_DEBUG=true # Or unset DJANGO_DEBUG to disable
 	export DJANGO_SECRET_KEY='your_secret_key'
 
-Add the repository root to your `PYTHONPATH`
+Then install the application's package:
 
-	export PYTHONPATH=`pwd`:$PYTHONPATH
+	python setup.py develop
 
-or, create a new build and install it to your virtualenv
-
-	make release
-	cd dist/
-	tar -xzvf django-launch-page-<version>
-	cd django-launch-page-<version>/
-	python setup.py install
-
-Run the example project with either Foreman or the devserver
+Run the example project with either Foreman or the devserver:
 
 	foreman start
 	python example_project/manage.py runserver
