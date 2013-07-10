@@ -5,14 +5,14 @@ python:
   - "2.7"
 
 env:
-  - DJANGO=django==1.4 --use-mirrors
-  - DJANGO=django==1.5 --use-mirrors
+#  - DJANGO=1.4
+#  - DJANGO=1.5
   - DJANGO_SETTINGS_MODULE=example_project.settings.test
 
 install:
-  - pip install $DJANGO
+#  - pip install Django==$DJANGO --use-mirrors
   - python setup.py develop
-  - pip install -r requirements.txt
+  - pip install -r requirements.txt --use-mirrors
 
 script:
   - make test_basic
