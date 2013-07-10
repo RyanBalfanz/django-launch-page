@@ -41,9 +41,10 @@ Include the `launch_page` URLconf in your project urls.py like this:
 
 or, bind it to the root domain, as in the example project:
 
-urlpatterns = patterns('',
-	url(r'', include('launch_page.urls')),
-)
+	urlpatterns = patterns('',
+		url(r'', include('launch_page.urls')),
+		...
+	)
 
 Migrate the application:
 
