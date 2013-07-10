@@ -32,7 +32,7 @@ Add `launch_page` to your `INSTALLED_APPS`:
 		'launch_page',
 	)
 
-Include the `launch_page` URLconf in your project urls.py like this:
+Include the `launch_page` URLconf in your project urls.py:
 
 	urlpatterns = patterns('',
 		...
@@ -59,14 +59,20 @@ Create a new virtualenv:
 
 	mkvirtualenv <env_name>
 
+Install the development packages
+
+	pip install -r requirements.txt
+
 Then install the application's package:
 
 	python setup.py develop
 
-Run the example project with either Foreman or the devserver:
+Run the example project:
 
+	cd example_project/
 	foreman start
-	python example_project/manage.py runserver
+	# Or, with Django's development server
+	python manage.py runserver
 
 Testing across multiple Python versions is support with tox. To run the tests:
 
