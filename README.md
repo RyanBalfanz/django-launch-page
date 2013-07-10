@@ -68,9 +68,9 @@ Run the example project with either Foreman or the devserver:
 	foreman start
 	python example_project/manage.py runserver
 
-Testing across multiple Python versions is support with tox. To run the tests with tox:
+Testing across multiple Python versions is support with tox. To run the tests:
 
-	make test_tox
+	make test
 
 [GeoIP]: https://docs.djangoproject.com/en/dev/ref/contrib/gis/geoip/
 [tox]: http://tox.readthedocs.org/en/latest/
