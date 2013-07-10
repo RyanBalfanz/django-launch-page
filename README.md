@@ -14,7 +14,7 @@ Develop Build Status
 [![Build Status](https://travis-ci.org/RyanBalfanz/django-launch-page.png?branch=develop)](https://travis-ci.org/RyanBalfanz/django-launch-page)
 
 
-Installing `launch_page` to you Django project will give you a simple teaser page for collecting e-mail addresses, names, and IP addresses.
+Installing `launch_page` to your Django project will give you a simple teaser page for collecting e-mail addresses, names, and IP addresses.
 
 The IP address can be geolocated with GeoIP. For more information, see the GeoIP documentation.
 
