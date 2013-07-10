@@ -1,5 +1,7 @@
 import os
 
+import dj_database_url
+
 from .factory import *
 
 
