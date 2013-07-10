@@ -39,10 +39,11 @@ Include the `launch_page` URLconf in your project urls.py like this:
 		url(r'^launch_page/', include('launch_page.urls')),
 	)
 
-or, bind it to the root domain:
+or, bind it to the root domain, as in the example project:
 
-	from launch_page.urls import launch_page_urlpatterns
-	urlpatterns += launch_page_urlpatterns
+urlpatterns = patterns('',
+	url(r'', include('launch_page.urls')),
+)
 
 Migrate the application:
 
