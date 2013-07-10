@@ -14,8 +14,9 @@ def project_dir(*args):
 	Returns the absolute path of joined args with PROJECT_DIR.
 
 	>>> PROJECT_DIR = '/path/to/project'
-	>>> project_dir('foo', 'bar')
-	'/path/to/project/foo/bar'
+	>>> pd = project_dir('foo', 'bar')
+	>>> pd.endswith('example_project/foo/bar')
+	True
 	"""
 	return os.path.abspath(os.path.join(PROJECT_DIR, *args))
 
