@@ -45,3 +45,9 @@ INSTALLED_APPS += (
 )
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+	'--cover-package=launch_page',
+	'--with-coverage',
+	'--with-doctest',
+]
