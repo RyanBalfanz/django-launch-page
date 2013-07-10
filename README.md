@@ -58,12 +58,6 @@ Create a new virtualenv:
 
 	mkvirtualenv <env_name>
 
-First, set some environment variables (a .env file helps here):
-
-	export DJANGO_SETTINGS_MODULE=example_project.settings.local
-	export DJANGO_DEBUG=true # Or unset DJANGO_DEBUG to disable
-	export DJANGO_SECRET_KEY='your_secret_key'
-
 Then install the application's package:
 
 	python setup.py develop
