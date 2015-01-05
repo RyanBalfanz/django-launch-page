@@ -10,7 +10,7 @@ def local_build_and_install():
 	with lcd("dist"):
 		local("tar -xzvf django-launch-page-*.tar.gz")
 		# print "ASDFASDF", local("ls -d -- */")
-		print os.getcwd()
+		print(os.getcwd())
 		# raise Exception(local("ls -d -- */"))
 		# with lcd(local("ls -d -- */")):
 		# 	local("python setup.py install")
