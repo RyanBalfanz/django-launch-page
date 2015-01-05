@@ -4,4 +4,6 @@
 *.pyc
 *.tox
 dist/
-example_project.db
+db.sqlite3
+venv/
+example_project.orig
