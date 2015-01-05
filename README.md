@@ -57,7 +57,7 @@ Contributing
 
 Create a new virtualenv:
 
-	mkvirtualenv <env_name>
+	pyvenv venv
 
 Install the development packages
 
