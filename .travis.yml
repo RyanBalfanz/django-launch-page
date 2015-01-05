@@ -1,17 +1,12 @@
 language: python
 
 python:
-  - "2.6"
-  - "2.7"
+  - "3.4"
 
 env:
-#  - DJANGO=1.4
-#  - DJANGO=1.5
-  - DJANGO_SETTINGS_MODULE=example_project.settings.test
+  - DJANGO_SETTINGS_MODULE=example_project.settings
 
 install:
-#  - pip install Django==$DJANGO --use-mirrors
-#  - python setup.py develop
   - pip install . --use-mirrors
   - pip install -r requirements.txt --use-mirrors
 
