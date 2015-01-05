@@ -36,13 +36,13 @@ Include the `launch_page` URLconf in your project urls.py:
 
 	urlpatterns = patterns('',
 		...
-		url(r'^launch_page/', include('launch_page.urls')),
+		url(r'^launch_page/', include('launch_page.urls', namespace="launch_page")),
 	)
 
 or, bind it to the root domain, as in the example project:
 
 	urlpatterns = patterns('',
-		url(r'', include('launch_page.urls')),
+		url(r'', include('launch_page.urls', namespace="launch_page")),
 		...
 	)
 
