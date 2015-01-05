@@ -13,5 +13,8 @@ install:
   - pip install -r requirements.txt
   - pip install -q Django==$DJANGO_VERSION
 
+before_script:
+  - python setup.py develop
+
 script:
   - python example_project/manage.py test
