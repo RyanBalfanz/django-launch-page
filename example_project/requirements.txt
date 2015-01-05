@@ -1,9 +1,1 @@
-Django==1.5.1
-South==0.8.1
-dj-database-url==0.2.1
-django-debug-toolbar==0.9.4
-#django-launch-page
-django-nose==1.1
-docutils==0.10
-gunicorn==0.17.2
-psycopg2==2.5.1
+Django==1.7.2
